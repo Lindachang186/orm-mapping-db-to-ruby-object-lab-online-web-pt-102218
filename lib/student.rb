@@ -86,6 +86,7 @@ class Student
     sql = <<-SQL
     SELECT grade
     FROM students
+    PRIMARY
     WHERE grade != 12
     SQL
     DB[:conn].execute(sql).map do |row|
