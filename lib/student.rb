@@ -89,7 +89,9 @@ class Student
     WHERE grade <= 11
     SQL
     DB[:conn].execute(sql).map do |row|
+      if row <= 11 
       self.new_from_db(row)
+      end
     end
   end
 
